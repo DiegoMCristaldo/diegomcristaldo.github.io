@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@100;400;700&display=swap');
+
+body {
+margin: 0;
+padding: 0;
+font-family: 'Poppins',sans-serif;
+color: white;
+}
+
+.header-container {
+    height: 100vh;
+    width:100vw;
+    background-color: black;
+    background-image: url('./img/foto.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 112px ;
+}
+
+h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+}
+
+.apresentacao {
+    font-size: 40px;
+    letter-spacing: 2px;
+    
+}
+.social-media {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.social-media a {
+    text-decoration: none;
+    color:white;
+    padding: 1rem 4rem;
+    border: 1px solid whitesmoke;
+    min-width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+
+a:hover {
+    background-color:rgb(226, 228, 231);
+    color: black;   
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400ms ease-in-out 0s;
+
+}
+
+.checkbox .trace {
+    width: 50px;
+    height: 2px;
+    background-color:rgba(199, 192, 192, 0.979);
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.checkbox .trace:nth-child(1) {
+    top:26px;
+    transform:rotate(0);
+}
+
+.checkbox .trace:nth-child(2) {
+    top:46px;
+    transform:rotate(0);
+}
+
+.checkbox .trace:nth-child(3) {
+    top:66px;
+    transform:rotate(0);
+}
+
+#toggle {
+    display: none;  
+}
+
+.menu {
+
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: transparent;
+    height: 40px;
+    width: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 60vmax white;
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
+    
+    
+}
+  
+.menu-items {
+    position: absolute;
+    top: 0;
+    left: -180px;
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms ease-in-out 0s;
+    
+}
+
+.menu-items ul {
+    list-style-type: none;
+
+}
+
+.menu-items ul li a {
+    margin:10px 0;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+
+}
+
+#toggle:checked + .checkbox .trace:nth-child(1) {
+   transform: rotate(45deg); 
+   top: 47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2) {
+    transform: translate(-100px);
+    width:30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 48px;
+
+}
+
+#toggle:checked + .checkbox {
+    background-color: white;
+
+
+}
+
+#toggle:checked ~ .menu {
+    box-shadow:0px 0px 0px 45vmax white;
+    z-index: 1;
+
+}
+
+#toggle:checked ~ .menu-items {
+    visibility: visible;
+    opacity: 1;
+}
+
+.about {
+    height: 100vh;
+    width:100vw;
+    background-color: #f5eeef; 
+    background-image: url('./img/foto1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 112px;
+    
+}
+
+.text{
+    width:45%;
+    margin-left: 200px;
+    letter-spacing: 1px;
+    color: rgb(109, 109, 109); 
+          
+}
+
+.contato{
+  margin-top: 50px;
+}
+.container {
+    height: auto;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    margin: 0;
+    background-color:black ;
+}
+.card-container {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   width: 90%;
+     
+}
+
+.card {
+    width: 300px; 
+    height: 300px;
+    border-radius: 50%;
+    margin:3rem 0 0 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:white;
+    background-image: url('./img/Captura\ de\ tela\ 2022-01-23\ 122933.png');
+    background-position:center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    filter:grayscale(0.5);
+    color:white;
+    cursor: pointer;
+    transition: 0.5 ease-in-out;
+ }
+
+ .card1 {
+    width: 300px; 
+    height: 300px;
+    border-radius: 50%;
+    margin:3rem 0 0 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:white;
+    background-image: url('./img/Captura\ de\ tela\ 2022-01-23\ 123113.png');
+    background-position:center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    filter:grayscale(0.5);
+    color:white;
+    cursor: pointer;
+    transition: 0.5 ease-in-out;
+ }
+
+ .card2 {
+    width: 300px; 
+    height: 300px;
+    border-radius: 50%;
+    margin:3rem 0 0 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:white;
+    background-image: url('./img/Captura\ de\ tela\ 2022-01-23\ 123259.png');
+    background-position:center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    filter:grayscale(0.5);
+    color:white;
+    cursor: pointer;
+    transition: 0.5 ease-in-out;
+ }
+
+ .card3 {
+    width: 300px; 
+    height: 300px;
+    border-radius: 50%;
+    margin:3rem 0 0 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:white;
+    background-image: url('./img/Captura\ de\ tela\ 2022-01-23\ 123425.png');
+    background-position:center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    filter:grayscale(0.5);
+    color:white;
+    cursor: pointer;
+    transition: 0.5 ease-in-out;
+ }
+
+ 
+ 
+ .card-text {
+     width: 40%;
+     letter-spacing: 1px;
+     color: rgb(109, 109, 109);
+     
+ }
+
+ .card-wrapper {
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items:center;
+     position: relative;
+ }
+
+ .card-wrapper::before {
+     content: '';
+     position: absolute;
+     height: 100px;
+     width: 100px;
+     border-radius:50% ;
+     display: block;
+     border: 1px solid white;
+     opacity: 0;
+     transition: 0.5s ease-in-out ;
+ }
+
+ .card-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+      
+ }
+.footer{
+    background-image: url('./img/Modern\ UIUX\ Designer\ Resume\ CV.jpg') ;
+    height: 110px;
+    font-size:25px;
+    text-align: center;
+    padding-top: 40px;
+ 
+       
+}
+
+#link-topo{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+
+}
+
+                                                                                                                                                                    
